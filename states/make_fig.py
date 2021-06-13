@@ -158,10 +158,10 @@ if cmd == 'US':
     date_cases, date_deaths = unpack_multiple_data("US_Data/Dates_Data.csv")
 
     plt.subplot(N,1,3)
-    line(date_cases, "Total cases per day", "day", "cases")
+    line(date_cases, "Total cases per first day of month", "day", "cases")
 
     plt.subplot(N,1,4)
-    line(date_deaths, "Total deaths per day", "day", "deaths") 
+    line(date_deaths, "Total deaths per first day of month", "day", "deaths") 
 
     # gender and age graph
     women_cases, women_deaths, labels = unpack_genders("US_Data/Women_Data.csv")
