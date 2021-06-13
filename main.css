@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    color: rgb(72, 151, 255);
+    background-color: rgb(72, 151, 255);
 }
 
 header div {
@@ -14,7 +14,8 @@ header div {
 }
 
 main {
-    background-color: bisque;
+    font-family: 'Times New Roman';
+    font-size: medium;
 }
 
 ol {
