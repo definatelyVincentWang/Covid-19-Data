@@ -1,0 +1,102 @@
+Team VBH:: Vincent, Benny, Hua
+IntroCS pd6 sec10
+FP0-Devlog 1
+2021-6-9
+Time Cost: 1.5 hours
+collaborated with: N/A
+consulted: N/A
+
+
+==============================================================
+  ____                 _                                  _    
+ |  _ \  _____   _____| | ___  _ __  _ __ ___   ___ _ __ | |_  
+ | | | |/ _ \ \ / / _ \ |/ _ \| '_ \| '_ ` _ \ / _ \ '_ \| __| 
+ | |_| |  __/\ V /  __/ | (_) | |_) | | | | | |  __/ | | | |_  
+ |____/ \___| \_/ \___|_|\___/| .__/|_| |_| |_|\___|_| |_|\__| 
+ | |    ___   __ _            |_|                              
+ | |   / _ \ / _` |                                            
+ | |__| (_) | (_| |                                            
+ |_____\___/ \__, |                                            
+             |___/              
+==============================================================
+
+
+//////////////////////////////////////////////////////////////
+OBSTACLES OVERCOME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We have currently created our python function which will be generating the graph that we need and the index.html
+file which will be our home page for this project. We have found the csv files from the internet that we want to
+take the information from and we know how to use it for ourselves. We are done with the main.css file which will go
+along with the index.html file. Lastly, we fixed import problems with matplotlib.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* We still need to find a way that will allow us to continuously gather data from an online source because we want to
+  keep our graphs updated on the most recent coronavirus cases.
+* We still need to create other files that will show the other graphs when run using jinja
+* How do we use css along with both html and python?
+* Very hard to find datasets with readable .csv files.
+* What is the difference between anaconda and pip?
+* Is there any way to "css" the graphs in matplotlib?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+COOL STUFF LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* We have learned how to use APIs properly and gather information from them to use for our own
+* You can do pip install [module] to install new modules!
+* Graphing a line graph with matplotlib is as simple as just: plt.plot(x_array,y_array)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+MID-DEVELOPMENT DESIGN CHANGES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We have decided to only focus on the US and its states.
+We had first decided on a single dataset with just the covid-19 death and cases rates, but we realized
+that dataset would not work with the other things we wanted to do, like find the ages of the deaths to covid-19 and much more.
+This prompted us to try and find new datasets, and we began thinking of creating our own datasets because we found that many
+of the datasets we found were very unorganized and hard to read. 
+We had to make some mid-development changes to change from gathering country data to gathering state data, after realizing that there were countries with large amounts of covid-19 cases and deaths, however it
+was very hard to get data for them (ie. China and Russia).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+LESSONS LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Finding data is very hard, and should be your first priority!!!
+* Researching a module before use is important; always look through the documentation.
+* Always look through the documentation before using the intertrash
+* Copy and paste for html code is fine because it's a markup language.
+* It's not necessary to make code too complicated
+* Teams should conquer and divide tasks so they get completed quicker and more effeciently
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//////////////////////////////////////////////////////////////
+
+
+LOG   (Ctrl-End to jump to end, then create new entry...)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+fristL -- 6/8/2021
+------------------------------------------
+* Researched different topics to try and attempt, and shortened our list to two different options: tic-tac-toe game or COVID-19 data analysis
+* Eventually settled on COVID-19 data analysis, and wrote up our proposal.
+==========================================
+               
+fristL -- 6/9/2021
+------------------------------------------
+* Worked on index.html file for the main website
+* Worked on style.css, and connected it to the index.html
+* Worked on the data_grapher.py
+==========================================
+
+fristL -- 6/9/2021
+------------------------------------------
+* Created 20 html files for each of the top 20 states
+* Created a data cruncher for python to allow for fast .csv data crunching.
+* Worked on creating new data sets and looking for more data
+* Began testing the FPP.py
+==========================================
+
+fristL -- 6/11/2021
+------------------------------------------
+* 
+==========================================
