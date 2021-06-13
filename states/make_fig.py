@@ -24,6 +24,7 @@ def line(data, title, x, y):
     plt.title(title)
     plt.xlabel(x)
     plt.ylabel(y)
+    plt.grid()
 
 def bar(data,title,x,y):
     # Data is a dictionary with top 20 States with the most cases
