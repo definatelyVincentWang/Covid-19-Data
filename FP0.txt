@@ -96,7 +96,19 @@ fristL -- 6/9/2021
 * Began testing the FPP.py
 ==========================================
 
-fristL -- 6/11/2021
+fristL -- 6/12/2021
 ------------------------------------------
-* 
+* Added a main.css and styled up our index.html
+* Tried resolving images loading error in make_fig.py
+* Began making graphing data static, however eventually gave up.
+* Changed Dates_Data.csv in US_Data to make line graph neater
+==========================================
+
+fristL -- 6/13/2021
+------------------------------------------
+* Fixed up main.css for better viewing
+* Found the problme in FP.py, and fixed it by printing "Content-Type: image/png\n" and using pngs instead of html
+* Create new state.py and make_fig.py to remove redundancy in py code
+* Converted static matplotlib graphs to dynamic through research on the intertrash
+* Fixed matplotlib subplots spacing problems and label problems
 ==========================================
