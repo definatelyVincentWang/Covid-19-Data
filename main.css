@@ -1,0 +1,44 @@
+body {
+    background-color: lightgray;
+    font-size: 20px;
+    color: white;
+    background-image: url("https://ysm-res.cloudinary.com/image/upload/ar_1:1,c_fill,dpr_3.0,f_auto,g_faces:auto,q_auto:eco,w_500/v1/yale-medicine/live-prod/ym_new/images/e1bc4546-5327-45df-8b8a-cd824aeefcfd_tcm990-378058.jpg");
+    background-repeat: round;
+    opacity: 90%;
+}
+
+header {
+    color: orange;
+    background-image: url("https://s7d2.scene7.com/is/image/TWCNews/file_nyc_coronavirusgraphicgenericivjpg");
+    background-size: 100%;
+}
+
+header div {
+    font-size: 0.75em;
+}
+
+main {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCVYM83bY2kp>")
+    background-size: 100%;
+    background-repeat: round;
+}
+
+ol {
+    width: 150px;
+}
+
+li {
+    text-align: left;
+}
+
+a:hover {
+    color: cyan;
+}
+
+.left {
+    text-align: left;
+}
+
+img {
+    float: right
+}

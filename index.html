@@ -1,70 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>COVID-19</title>
-    <style>
-        body {
-            background-color: lightgray;
-            font-size: 20px;
-            text-align: center;
-            width: 550px;
-            padding-left: 500px;
-        }
-
-        header div {
-            font-size: 0.75em;
-        }
-
-        ol {
-            width: 150px;
-        }
-
-        li {
-            text-align: left;
-        }
-
-        a:hover {
-            color: cyan;
-        }
-
-        .left {
-            text-align: left;
-        }
-    </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COVID-19</title>
+        <link href="main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    <header>
-        <div class="left">VBH: Vincent, Benny, Hua</div>
-        <h1>COVID-19 TRENDS ON GRAPHS</h1>
-    </header>
+        <header>
+                <div class="left">Team VBH: Vincent Wang, Benny Ye, Hua Huang</div>
+                <h1>COVID-19 TRENDS ON GRAPHS</h1>
+        </header>
 
-    <main>
-        <h2>So what is COVID-19?</h2>
-        <p class="left">COVID-19 is an infectious disease that had it's first case in December of 2019. I> worldwide
-            pandemic at around mid-January as cases were just increasing exponentially and death
-            numbers just increased. It reached America in January of 2020. At first it was just a mild case,
-            nobody really thought that it was any serious, until the diesease spread rapidly and until there
-            were numerous death cases in the US, then the government took action. We are going to show the
-            cases and deaths caused by COVID-19 overtime in 20 different states of the US alongside trends
-            observed over the top 10 states with the most deaths and cases.</p>
-        <p><div class="left">Click on this link to go to the US graphs</div></p>
-        <li><a href="states/state.py?cmd=US">United States</a></li>
-        <div class="left">Click on these links to go to the graphs</div>
-        <ol>
-            <li><a href="states/state.py?cmd=California">California</a></li>
-            <li><a href="states/state.py?cmd=Texas">Texas</a></li>
-            <li><a href="states/state.py?cmd=Florida">Florida</a></li>
-            <li><a href="states/state.py?cmd=New_York">New York</a></li>
-            <li><a href="states/state.py?cmd=Illinois">Illinois</a></li>
-            <li><a href="states/state.py?cmd=Pennsylvania">Pennsylvania</a></li>
-            <li><a href="states/state.py?cmd=Georgia">Georgia</a></li>
-            <li><a href="states/state.py?cmd=Ohio">Ohio</a></li>
-            <li><a href="states/state.py?cmd=New_Jersey">New Jersey</a></li>
-            <li><a href="states/state.py?cmd=North_Carolina">North Carolina</li>
-        </ol>
+        <main>
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/200702082152-map-0702.jpg" height="350" width="500">
+
+                <h2>So What is COVID-19?</h2>                
+                <p class="left">COVID-19 is an infectious disease that had it's first case in December of 2019. It worldwide pandemic at around mid-January as cases numbers just increased. It reached America in January of 2020. At first it was just a mild case,
+                nobody really thought that it was any serious, until the diesease spread rapidly and until there
+                were numerous death cases in the US, then the government took action. We are going to show the
+                cases and deaths caused by COVID-19 overtime in 20 different states of the US alongside trends
+                observed over the top 10 states with the most deaths and cases.</p>  
+                <div class="left">Click on this link to go to the graph for the entire US</div>
+                <li><a href="states/state.py?cmd=US">United States</a></li>
+                <div class="left">Click on these links to go to the graphs</div>
+                <ol>
+                    <li><a href="states/state.py?cmd=California">California</a></li>
+                    <li><a href="states/state.py?cmd=Texas">Texas</a></li>
+                    <li><a href="states/state.py?cmd=Florida">Florida</a></li>
+                    <li><a href="states/state.py?cmd=New_York">New York</a></li>
+                    <li><a href="states/state.py?cmd=Illinois">Illinois</a></li>
+                    <li><a href="states/state.py?cmd=Pennsylvania">Pennsylvania</a></li>
+                    <li><a href="states/state.py?cmd=Georgia">Georgia</a></li>
+                    <li><a href="states/state.py?cmd=Ohio">Ohio</a></li>
+                    <li><a href="states/state.py?cmd=New_Jersey">New Jersey</a></li>
+                    <li><a href="states/state.py?cmd=North_Carolina">North Carolina</li>
+                </ol>
+        </main>
 </body>
-
 </html>
