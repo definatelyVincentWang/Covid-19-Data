@@ -11,7 +11,7 @@ state = " ".join(cmd.split('_'))
 print("Content-Type: text/html\n")
 print(f"<html> <head> <center><h1>{state} Covid-19 Data</h1></center> </head>")
 print("<body>")
-
+print('<li><a href="/../index.html">Go back to home page</a></li>')
 print(f'<img src="make_fig.py?cmd={cmd}">')
 
 print("</body></html>")
