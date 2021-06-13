@@ -1,15 +1,13 @@
 body {
     background-color: lightgray;
     font-size: 20px;
-    color: white;
-    background-image: url("https://www.oie.int/app/uploads/2021/04/microsoftteams-image-1.jpeg");
+    color: gray;
     background-repeat: round;
     opacity: 90%;
 }
 
 header {
-    color: orange;
-    background-image: url("https://s7d2.scene7.com/is/image/TWCNews/file_nyc_coronavirusgraphicgenericivjpg");
+    color: rgb(72, 151, 255);
     background-size: 100%;
 }
 
@@ -18,7 +16,7 @@ header div {
 }
 
 main {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCVYM83bY2kp>")
+    background-color: bisque;
     background-size: 100%;
     background-repeat: round;
 }
