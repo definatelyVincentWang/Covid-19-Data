@@ -55,11 +55,15 @@
                 75-84 compared to women.</p>
 
                 <h2>About our program:</h2>
-                <p>We created a python file, <a href="download_state.txt" target="_blank">state.py</a>, which takes in an input "cmd", for which state you want to print. <br>
-                This python code displays all of the charts using html, and calls "make_fig.py" to create the images dynamically. <br>
-                We also created a python file, <a href="download_fig.txt" target="_blank">make_fig.py</a>, which takes in an input "cmd", for which state you want to graph. <br>
-                It works by checking if the input is in which catagory the input is in: (Both deaths and cases, only deaths, <br>
-                only cases, death and case percentages, only death percentages). It then prints the correct graphs for the input.</p>
+                <p>So, we used two different python files: state.py and make_fig.py. In the state.py, we used the cgi module <br>
+                to take in a string input. Like US, California, New_York, etc. Using this as well as fstrings, we would be able to use <br>
+                minimal code for all of the websites, since they all used the same exact code. We also found that you can “run” a python <br>
+                script using<img src=””> in html, as shown here: (Show stuff). This calls the make_fig python script. In make_fig.py, we <br>
+                used the matplotlib library to graph all of the data. We used the csv module to convert all of our csv data into python dictionaries. <br>
+                We also imported sys in order to “print” the matplotlib figure. We also imported the cgi module to take in an “input” to save code. <br>
+                We have a function that uses matplotlib to draw a line graph (point to line). We also have a function to graph bar graphs using matplotlib. <br>
+                We have 2 functions for unpacking data. At the bottom, we have a bunch of if statements to check which state the “input” is, and print the proper graphs. <br>
+                </p>
         </main> 
 </body>
 </html>

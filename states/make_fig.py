@@ -2,7 +2,6 @@
 import matplotlib.pyplot as plt
 import csv
 import sys
-import os
 import cgi
 import matplotlib
 
