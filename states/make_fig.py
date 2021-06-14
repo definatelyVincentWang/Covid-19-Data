@@ -108,31 +108,39 @@ def unpack_genders(file):
 print("Content-Type: image/png\n", flush=True)
 
 # Both deaths and cases
-if cmd in ['California', 'Georgia', 'Illinois', 'Ohio']:
+if cmd in ['California', 'Illinois', 'Ohio']:
     N = 2
     plt.subplots(N, 1, sharex=False, sharey=False, figsize=(15,13))
     cases, deaths = unpack_multiple_data(f"State_Data/{cmd}.csv")
     plt.subplot(N,1,1)
-    state_bar(cases, "Cases by age", "Age", "Cases")
+    state_bar(cases, "Total cases by age", "Age", "Cases")
     plt.subplot(N,1,2)
-    state_bar(cases, "Deaths by age", "Age", "Deaths")
+    state_bar(deaths, "Total deaths by age", "Age", "Deaths")
+if cmd == 'Georgia':
+    N = 2
+    plt.subplots(N, 1, sharex=False, sharey=False, figsize=(15,13))
+    cases, deaths = unpack_multiple_data(f"State_Data/{cmd}.csv")
+    plt.subplot(N,1,1)
+    state_bar(cases, "Total cases by age in Bryan, Camden, Chatham, Effingham, Glynn, Liberty, Long, and McIntosh Counties.", "Age", "Cases")
+    plt.subplot(N,1,2)
+    state_bar(deaths, "Total deaths by age in Bryan, Camden, Chatham, Effingham, Glynn, Liberty, Long, and McIntosh Counties.", "Age", "Deaths")
 # only deaths
 if cmd in ['Florida', 'New_York', 'Pennsylvania']:
     deaths = unpack_data(f"State_Data/{cmd}.csv")
-    state_bar(deaths, "Deaths by age", "Age", "Deaths")
+    state_bar(deaths, "Deaths with confirmed or presumed COVID-19", "Age", "Deaths")
 # only cases
 if cmd == 'North_Carolina':
     cases = unpack_data("State_Data/North_Carolina.csv")
-    state_bar(cases, "Cases by age", "Age", "Cases")
+    state_bar(cases, "Total Cases by age", "Age", "Cases")
 # both death and case percentages
 if cmd == 'Texas':
     N = 2
     plt.subplots(N, 1, sharex=False, sharey=False, figsize=(15,13))
     cases, deaths = unpack_multiple_data("State_Data/Texas.csv")
     plt.subplot(N,1,1)
-    state_bar(cases, "Percent Cases by age", "Age", "Percent Cases")
+    state_bar(cases, "Percentage of Total Cases by age", "Age", "Percent Cases")
     plt.subplot(N,1,2)
-    state_bar(cases, "Percent Deaths by age", "Age", "Percent Deaths")
+    state_bar(deaths, "Percentage of TOtal Deaths by age", "Age", "Percent Deaths")
 # only death percentage
 if cmd == 'New_Jersey':
     data = unpack_data("State_Data/New_Jersey.csv")
@@ -170,10 +178,10 @@ if cmd == 'US':
     women_cases, women_deaths = unpack_multiple_data("US_Data/Women_Data.csv")
     men_cases, men_deaths = unpack_multiple_data("US_Data/Men_Data.csv")
     plt.subplot(N,1,7)
-    state_bar(women_cases, "Total cases for Women by age", "age", "cases")
+    state_bar(women_cases, "Total deaths for Women by age", "age", "cases")
     
     plt.subplot(N,1,8)
-    state_bar(men_cases, "Total cases for Men by age", "age", "cases")
+    state_bar(men_cases, "Total deaths for Men by age", "age", "cases")
     
     plt.subplot(N,1,9)
     state_bar(women_deaths, "Total cases for Women by age", "age", "Deaths")
