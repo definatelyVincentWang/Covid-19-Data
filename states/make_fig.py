@@ -3,9 +3,6 @@ import matplotlib.pyplot as plt
 import csv
 import sys
 import cgi
-import matplotlib
-
-matplotlib.use('Agg')
 
 def get_cmd():
   args = cgi.FieldStorage()
@@ -197,4 +194,3 @@ if cmd == 'US':
 
 plt.savefig(sys.stdout.buffer)
 sys.stdout.flush()
-

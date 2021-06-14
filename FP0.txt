@@ -1,8 +1,8 @@
 Team VBH:: Vincent, Benny, Hua
 IntroCS pd6 sec10
-FP0-Devlog 1
+FP1-Devlog 2
 2021-6-9
-Time Cost: 1.5 hours
+Time Cost: 19 hours
 collaborated with: N/A
 consulted: N/A
 
@@ -28,6 +28,9 @@ We have currently created our python function which will be generating the graph
 file which will be our home page for this project. We have found the csv files from the internet that we want to
 take the information from and we know how to use it for ourselves. We are done with the main.css file which will go
 along with the index.html file. Lastly, we fixed import problems with matplotlib.
+
+We overcame a lack of data by creating our own by taking information from sources like the CDC and converting their data
+into .csv files. This took a long time, however it was worth it in the end because we had enough data to print multiple graphs.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 UNRESOLVED ISSUES
@@ -39,6 +42,9 @@ UNRESOLVED ISSUES
 * Very hard to find datasets with readable .csv files.
 * What is the difference between anaconda and pip?
 * Is there any way to "css" the graphs in matplotlib?
+* Why does it take so long to plot just 500 points in matplotlib?
+* How do you remove the huge white spaces on the top and bottom of the matplotlib graphs?
+* How do you print a single image with multiple graphs without using subplots?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 COOL STUFF LEARNED
@@ -46,6 +52,24 @@ COOL STUFF LEARNED
 * We have learned how to use APIs properly and gather information from them to use for our own
 * You can do pip install [module] to install new modules!
 * Graphing a line graph with matplotlib is as simple as just: plt.plot(x_array,y_array)
+* You can use a href and img src to run a python script.
+* You can use cgi to take in an input into a python script
+* You can get arguments for a python script by importing cgi and using: cgi.FieldStorage()
+* You can create subplots in matplotlib
+* You can create and print png files using python3 with: print("Content-Type: image/png\n")
+* You can import csv and use csv.reader(file, delimiter) to read csv files
+* You can plot line graphs by importing matplotlib.pyplot as plt, and using plt.plot(x_data, y_data)
+* You can plot bar graphs by importing matplotlib.pyplot as plt, and using plt.bar(x_data, y_data)
+* You can "print" graphs by importing sys and matplotlib.pylot as plt, and doing plt.savefig(sys.stdout.buffer)
+* You can use this: QUERY_STRING="[input_stuff]=[input]" ./[file].py to run a python file that takes in input with cgi
+* The python print statement can take in a paramter called flush (boolean), which will allow that print statement to be displayed first
+* If you want to make subplots but don't want to have them share x and y labels, you can set sharex and sharey to false
+* You can increase the size of subplots with this paramter: figsize=(x,y)
+* You can recieve multiple returns by using 2 variables like: state_cases, state_deaths = unpack_multiple_data("US_Data/Pop_Data.csv")
+* You can use this: plt.title(title) to set a title for a graph
+* You can use these: plt.xlabel(x) and plt.ylabel(y) to set x and y labels for graphs
+* This command: plt.grid() can give your line graph grids
+* You can use git reset --hard to competely reset back to your last git add (if you are in a git repository)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 MID-DEVELOPMENT DESIGN CHANGES
@@ -57,6 +81,10 @@ This prompted us to try and find new datasets, and we began thinking of creating
 of the datasets we found were very unorganized and hard to read. 
 We had to make some mid-development changes to change from gathering country data to gathering state data, after realizing that there were countries with large amounts of covid-19 cases and deaths, however it
 was very hard to get data for them (ie. China and Russia).
+
+We had a problem with apache, where it wouldn't print images even though we had the correct html code and the images.
+This prompted us to change from just using a single python file that would create the image and then display it, we would use
+two, one to display, and one to graph.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 LESSONS LEARNED
@@ -67,6 +95,11 @@ LESSONS LEARNED
 * Copy and paste for html code is fine because it's a markup language.
 * It's not necessary to make code too complicated
 * Teams should conquer and divide tasks so they get completed quicker and more effeciently
+* Creating a website that statically displays images would probably be better for our purpose.
+* Sometimes, trying to add a background image to an html webpage doesn't work as well as you'd hope
+* Talking to a teacher or mentor is better than spending 7 hours dumpster diving in the intertrash for answers
+* Always use git to save files and git add constantly, so if you make a bad change, you can always go back
+* Try to space out work, so you don't wind up spending 12 hours over the weekend trying to debug
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //////////////////////////////////////////////////////////////
 
@@ -107,10 +140,12 @@ fristL -- 6/12/2021
 fristL -- 6/13/2021
 ------------------------------------------
 * Fixed up main.css for better viewing
-* Found the problme in FP.py, and fixed it by printing "Content-Type: image/png\n" and using pngs instead of html
+* Found the problem in FP.py, and fixed it by printing "Content-Type: image/png\n" and using pngs instead of html
 * Create new state.py and make_fig.py to remove redundancy in py code
 * Converted static matplotlib graphs to dynamic through research on the intertrash
 * Fixed matplotlib subplots spacing problems and label problems
 * Fixed up html 
 * Added about our code in html
+* Prepared scripts for presentation
+* Fixed grammer mistakes in index.html
 ==========================================
