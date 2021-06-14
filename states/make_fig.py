@@ -160,13 +160,20 @@ if cmd == 'US':
     line(date_deaths, "Total deaths per first day of month", "day", "deaths") 
 
     # line graphs for deaths and cases all days
-    date_cases, date_deaths = unpack_multiple_data("US_Data/unused_dates_data.csv", )
+    date_Total_cases, date_New_cases = unpack_multiple_data("US_Data/unused_dates_data.csv")
+    date_Total_deaths, date_New_Deaths = unpack_multiple_data("US_Data/unused_dates_Deaths_data.csv")
 
     plt.subplot(N,1,5)
-    line(date_cases, "Total cases Since 1/22/2020", "day", "cases")
+    line(date_Total_cases, "Total cases Since 1/22/2020", "day", "cases")
     
     plt.subplot(N,1,6)
-    line(date_deaths, "Total deaths for all days", "day", "deaths") 
+    line(date_Total_deaths, "Total deaths Since 1/22/2020", "day", "deaths") 
+
+    plt.subplot(N,1,7)
+    line(date_New_cases, "New cases Since 1/22/2020", "day", "cases")
+    
+    plt.subplot(N,1,8)
+    line(date_New_Deaths, "New deaths Since 1/22/2020", "day", "deaths") 
 
     # gender and age graph
     women_cases, women_deaths = unpack_multiple_data("US_Data/Women_Data.csv")
@@ -182,11 +189,6 @@ if cmd == 'US':
     
     plt.subplot(N,1,10)
     state_bar(men_deaths, "Total cases for Men by age", "age", "Deaths")
-    # fatality rate bar graph
-    fatality_rate = unpack_data("US_Data/Fatality_Data.csv")
-    plt.subplot(N,1,11)
-    bar(fatality_rate, "Top 20 highest COVID-19 Fatality Rates", "state", "Fatality Rate")    
-    plt.xticks(rotation=45)
 
 plt.savefig(sys.stdout.buffer)
 sys.stdout.flush()
