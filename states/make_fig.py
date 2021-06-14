@@ -149,7 +149,7 @@ if cmd == 'New_Jersey':
 if cmd == 'US':
     # top 20 states deaths and cases
     N = 12
-    plt.subplots(N, 1, sharex=False, sharey=False, figsize=(20,55))
+    plt.subplots(N, 1, sharex=False, sharey=False, figsize=(20,63))
 
     state_cases, state_deaths = unpack_multiple_data("US_Data/Pop_Data.csv")
     plt.subplot(N,1,1)
