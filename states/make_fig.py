@@ -148,7 +148,7 @@ if cmd == 'New_Jersey':
 # US only
 if cmd == 'US':
     # top 20 states deaths and cases
-    N = 10
+    N = 12
     plt.subplots(N, 1, sharex=False, sharey=False, figsize=(20,55))
 
     state_cases, state_deaths = unpack_multiple_data("US_Data/Pop_Data.csv")
@@ -161,32 +161,39 @@ if cmd == 'US':
     # line graphs for deaths and cases all days
     date_Total_cases, date_New_cases = unpack_multiple_data("US_Data/unused_dates_data.csv")
     date_Total_deaths, date_New_Deaths = unpack_multiple_data("US_Data/unused_dates_Deaths_data.csv")
+    date_cases, date_deaths = unpack_multiple_data("US_Data/Dates_Data.csv")
 
     plt.subplot(N,1,3)
-    line(date_Total_cases, "Total cases Since 1/22/2020", "day", "cases")
+    line(date_cases, "New Cases at the start of every month", "day", "cases")
     
     plt.subplot(N,1,4)
-    line(date_Total_deaths, "Total deaths Since 1/22/2020", "day", "deaths") 
+    line(date_deaths, "New Deaths at the start of every month", "day", "deaths") 
 
     plt.subplot(N,1,5)
-    line(date_New_cases, "New cases Since 1/22/2020", "day", "cases")
+    line(date_Total_cases, "Total cases Since 1/22/2020", "day", "cases")
     
     plt.subplot(N,1,6)
+    line(date_Total_deaths, "Total deaths Since 1/22/2020", "day", "deaths") 
+
+    plt.subplot(N,1,7)
+    line(date_New_cases, "New cases Since 1/22/2020", "day", "cases")
+    
+    plt.subplot(N,1,8)
     line(date_New_Deaths, "New deaths Since 1/22/2020", "day", "deaths") 
 
     # gender and age graph
     women_cases, women_deaths = unpack_multiple_data("US_Data/Women_Data.csv")
     men_cases, men_deaths = unpack_multiple_data("US_Data/Men_Data.csv")
-    plt.subplot(N,1,7)
+    plt.subplot(N,1,9)
     state_bar(women_cases, "Total deaths for Women by age", "age", "cases")
     
-    plt.subplot(N,1,8)
+    plt.subplot(N,1,10)
     state_bar(men_cases, "Total deaths for Men by age", "age", "cases")
     
-    plt.subplot(N,1,9)
+    plt.subplot(N,1,11)
     state_bar(women_deaths, "Total cases for Women by age", "age", "Deaths")
     
-    plt.subplot(N,1,10)
+    plt.subplot(N,1,12)
     state_bar(men_deaths, "Total cases for Men by age", "age", "Deaths")
 
 plt.savefig(sys.stdout.buffer)

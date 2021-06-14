@@ -2,7 +2,6 @@ body {
     background-color: white;
     font-size: 20px;
     color: rgb(72, 151, 255);
-    opacity: 90%;
 }
 
 header {
@@ -32,20 +31,8 @@ ol {
     width: 150px;
 }
 
-li {
-    text-align: left;
-}
-
 a:hover {
-    color: black;
-}
-
-.left {
-    text-align: left;
-}
-
-img {
-    float: right
+    color: lightgreen;
 }
 
 /* dropdown css */
@@ -56,13 +43,14 @@ img {
     font-size: 16px;
     border: none;
 }
-  
+
 .dropdown {
     position: relative;
     display: inline-block;
 }
-  
+
 .dropdown-content {
+    color: white;
     display: none;
     position: absolute;
     background-color: rgb(72, 151, 255);
@@ -70,7 +58,7 @@ img {
     box-shadow: 0px 8px 16px 0px white;
     z-index: 1;
 }
-  
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
