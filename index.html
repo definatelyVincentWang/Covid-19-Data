@@ -15,30 +15,51 @@
 
         <main>
                 <h2>So What is COVID-19?</h2>                
-                <p class="left">COVID-19 is an infectious disease that had it's first case in December of 2019. 
-                It became a worldwide pandemic at around mid-January as case numbers started to increase. 
-                It reached America in January of 2020. At first, it was just a mild case and nobody really 
-                thought that it was any serious, until the disease spread rapidly and there
-                were numerous death cases in the US. Then, the government took action. We are going to show the
-                cases and deaths caused by COVID-19 overtime in the US alongside trends
-                observed over the top 10 states with the most deaths and cases.</p>  
+                <p class="left">COVID-19 is an infectious disease that had it's first case in December of 2019.<br> 
+                It became a worldwide pandemic at around mid-January as case numbers started to increase. <br>
+                It reached America in January of 2020. At first, it was just a mild case and nobody really <br>
+                thought that it was any serious, until the disease spread rapidly and there were numerous <br>
+                death cases in the US. Then, the government took action. We are going to show the cases and <br>
+                deaths caused by COVID-19 overtime in the US alongside trends<br> 
+                observed over the top 10 states with the most deaths and cases.</p>
+                <h2>How do you use this website?</h2>
+                <p class="left">This website has links to all different kinds of graphs. <br>
+                Click on each link to get the data for the specified state/contry. Currently, <br>
+                This website is in construction and only has data for 10 different states and <br>
+                the entire US. We plan to add more states and other countries in the future.</p>
                 <div class="left">Click on this link to go to the graph for the entire US</div>
                 <li><a href="states/state.py?cmd=US">United States</a></li>
                 <div class="left">Click on these links to go to the graphs</div>
-                <ol>
-                    <li><a href="states/state.py?cmd=California">California</a></li>
-                    <li><a href="states/state.py?cmd=Texas">Texas</a></li>
-                    <li><a href="states/state.py?cmd=Florida">Florida</a></li>
-                    <li><a href="states/state.py?cmd=New_York">New York</a></li>
-                    <li><a href="states/state.py?cmd=Illinois">Illinois</a></li>
-                    <li><a href="states/state.py?cmd=Pennsylvania">Pennsylvania</a></li>
-                    <li><a href="states/state.py?cmd=Georgia">Georgia</a></li>
-                    <li><a href="states/state.py?cmd=Ohio">Ohio</a></li>
-                    <li><a href="states/state.py?cmd=New_Jersey">New Jersey</a></li>
-                    <li><a href="states/state.py?cmd=North_Carolina">North Carolina</a></li>
-                </ol>
-        </main>
-        <h1>Our Results</h1>
-        <p>After graphing our data, we determined that </p>
+                <div class="dropdown">
+                <button class="dropbtn">States</button>
+                <div class="dropdown-content">
+                    <a href="states/state.py?cmd=California">California</a><br>
+                    <a href="states/state.py?cmd=Texas">Texas</a><br>
+                    <a href="states/state.py?cmd=Florida">Florida</a><br>
+                    <a href="states/state.py?cmd=New_York">New York</a><br>
+                    <a href="states/state.py?cmd=Illinois">Illinois</a><br>
+                    <a href="states/state.py?cmd=Pennsylvania">Pennsylvania</a><br>
+                    <a href="states/state.py?cmd=Georgia">Georgia</a><br>
+                    <a href="states/state.py?cmd=Ohio">Ohio</a><br>
+                    <a href="states/state.py?cmd=New_Jersey">New Jersey</a><br>
+                    <a href="states/state.py?cmd=North_Carolina">North Carolina</a>
+               </div>
+               </div>
+               <h2>Our Results</h2>
+                <p>After graphing our data, we determined that in the US, Total Deaths peaked in December <br>
+                We believe this is because of the travel season and that maybe, like the flu and common cold, <br>
+                COVID-19 spreads easier in the cold. We then saw rapid decline of deaths coming into June, however <br>
+                We also saw continued increases in COVID-19 cases. We believe the opposite trends of deaths and cases <br>
+                is due to increased vaccination levels. We also saw an increased risk for getting infected or dying from <br>
+                covid-19 in Women over 85 years compared to men. However, we also saw an increased risk in Men from <br>
+                75-84 compared to women. </p>
+
+                <h2>About our program:</h2>
+                <p>We created a python file, <a href="download_state.txt" target="_blank">state.py</a>, which takes in an input "cmd", for which state you want to print. <br>
+                This python code displays all of the charts using html, and calls "make_fig.py" to create the images dynamically. <br>
+                We also created a python file, <a href="download_fig.txt" target="_blank">make_fig.py</a>, which takes in an input "cmd", for which state you want to graph. <br>
+                It works by checking if the input is in which catagory the input is in: (Both deaths and cases, only deaths, <br>
+                only cases, death and case percentages, only death percentages). It then prints the correct graphs for the input.</p>
+        </main> 
 </body>
 </html>

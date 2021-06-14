@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+print("Content-Type: text/html\n")
+
 import cgi
 
 def get_cmd():
@@ -8,7 +10,6 @@ def get_cmd():
 
 cmd = get_cmd()
 state = " ".join(cmd.split('_'))
-print("Content-Type: text/html\n")
 print(f"<html> <head> <center><h1>{state} Covid-19 Data</h1></center> </head>")
 print("<body>")
 # Change this variable with your username

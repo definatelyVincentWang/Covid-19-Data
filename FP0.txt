@@ -111,4 +111,6 @@ fristL -- 6/13/2021
 * Create new state.py and make_fig.py to remove redundancy in py code
 * Converted static matplotlib graphs to dynamic through research on the intertrash
 * Fixed matplotlib subplots spacing problems and label problems
+* Fixed up html 
+* Added about our code in html
 ==========================================

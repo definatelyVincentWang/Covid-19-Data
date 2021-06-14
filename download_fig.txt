@@ -141,14 +141,16 @@ if cmd == 'New_Jersey':
 if cmd == 'US':
     # top 20 states deaths and cases
     N = 11
-    plt.subplots(N, 1, sharex=False, sharey=False, figsize=(20,55))
+    plt.subplots(N, 1, sharex=False, sharey=False, figsize=(21,50))
 
     state_cases, state_deaths = unpack_multiple_data("US_Data/Pop_Data.csv")
     plt.subplot(N,1,1)
-    bar(state_cases, "Number of cases per 1,000,000 people (Cumulative)", "state", "Cases")
+    bar(state_cases, "Number of cases per 1,000,000 people", "state", "Cases")
+    plt.xticks(rotation=45)
 
     plt.subplot(N,1,2)
-    bar(state_deaths, "Number of deaths per 1,000,000 people (Cumulative)", "state", "Deaths")
+    bar(state_deaths, "Number of deaths per 1,000,000 people", "state", "Deaths")
+    plt.xticks(rotation=45)
 
     # line graph for deaths and cases per first day of month
     date_cases, date_deaths = unpack_multiple_data("US_Data/Dates_Data.csv")
@@ -163,7 +165,7 @@ if cmd == 'US':
     date_cases, date_deaths = unpack_multiple_data("US_Data/unused_dates_data.csv", )
 
     plt.subplot(N,1,5)
-    line(date_cases, "Total cases Since 1/22/2020", "day", "cases")
+    line(date_cases, "Total cases for all days", "day", "cases")
     
     plt.subplot(N,1,6)
     line(date_deaths, "Total deaths for all days", "day", "deaths") 
